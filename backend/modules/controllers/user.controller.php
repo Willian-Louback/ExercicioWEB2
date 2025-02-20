@@ -28,6 +28,15 @@
         echo json_encode(value: ['status' => 'error', 'mensagem' => $e->getMessage()]);
       }
     }
+
+    public function getAll(): void {
+      try {
+        $this->service->getAll();
+      } catch (Exception $e) {
+        http_response_code(response_code: $e->getCode());
+        echo json_encode(value: ['status' => 'error', 'mensagem' => $e->getMessage()]);
+      }
+    }
   }
 ?>
 

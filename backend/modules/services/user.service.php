@@ -52,6 +52,13 @@
       }
     }
 
+    public function getAll(): void {
+      $fileName = __DIR__ . '/../db/users.json';
+      $jsonData = file_get_contents(filename: $fileName );
+
+      echo $jsonData;
+    }
+
     private function findUser($data, $email) {
       foreach ($data as $item) {
         if ($item['email'] === $email) {

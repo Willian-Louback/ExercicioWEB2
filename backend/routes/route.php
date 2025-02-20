@@ -7,6 +7,7 @@
     $routes = [
       '/register' => 'register',
       '/login' => 'login',
+      '/getAll' => 'getAll'
     ];
 
     if (array_key_exists(key: $request_uri, array: $routes)) {
